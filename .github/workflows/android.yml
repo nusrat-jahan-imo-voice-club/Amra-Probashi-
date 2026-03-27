@@ -24,10 +24,8 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      install- name: Install Dependencies
-  run: |
-    rm -rf node_modules package-lock.json
-    npm install
+      - name: Install Dependencies
+        run: npm install
 
       - name: Build Web App
         run: npm run build
